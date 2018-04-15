@@ -1,15 +1,19 @@
 #pragma once
 
 #include "ofMain.h"
+#include <list>
 #include <vector>
 
+using std::list;
 using std::vector;
 
 class ofApp : public ofBaseApp{
 
-    vector<ofPoint> coordinates;
-    int triangles = int(ofRandom(500,1000));
-    float sphereRadius = 300, sphereRotation = 0, speed = .1, triSize = ofRandom(5,10);
+    ofPoint p;
+    list<ofPoint> coordinates;
+    vector<int> r, g, b, degree, x, y, z;
+    int triangles = int(ofRandom(8000,10000)), rad = 1, sphereRadius = 300, alpha = 255;
+    float sphereRotation = 0.0, speed = .1, triSize = ofRandom(5.0,10.0);
     
 	public:
 		void setup();
